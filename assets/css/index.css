@@ -39,6 +39,10 @@ body {
     .mobile-header-wrapper {
         width: 100% !important;
     }
+
+    .footer h3 {
+        font-size: 24px !important;
+    }
 }
 
 /* Small screen */
@@ -229,11 +233,11 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     overflow: hidden;
 }
 
-.splide__slide img {
+.banner .splide__slide img {
     transition-duration: 750ms;
 }
 
-.splide__slide:hover img {
+.banner .splide__slide:hover img {
     scale: 1.05;
     transition-duration: 750ms;
 }
@@ -297,8 +301,17 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .best-selling-actions {
     position: absolute;
-    top: 24px;
+    top: 28px;
     right: 24px;
+}
+
+.best-selling-actions .bi {
+    height: 20px;
+    width: 20px;
+}
+
+.best-selling-actions .bi::before {
+    font-weight: 600 !important;
 }
 
 .best-selling-action-btn {
@@ -315,40 +328,57 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 
 .testimonials-wrapper {
-    background: #fae7df;
+    background-image: url("../images/testimonials.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.testimonials-wrapper::before {
+    content: "";
+    background: #000;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .testimonials-profile {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     overflow: hidden;
 }
 
-/* 
-.product-1,
-.product-1-hoverimg {
-    transition: opacity 0.75s ease-in-out;
-} */
-
-/* .fade-out {
-    opacity: 0;
-    pointer-events: none;
+.testimonials-innter{
+    z-index: 10;
+    position: relative;
+}
+.testimonials-innter .bi-quote{
+    font-size: 100px;
+    rotate: 180deg;
+    height: 100px;
+    color: #ddcebf;
+}
+.testimonials-innter .bi-quote::before{
+    vertical-align: 6px;
 }
 
-.fade-in {
-    opacity: 1;
-    pointer-events: auto;
+.border-red {
+    border-color: #ddcebf !important;
 }
-
-.product-1-hoverimg {
-    display: none;
-} */
 
 .static-heart {
     position: absolute;
     top: 34px;
     right: 34px;
+}
+
+.static-heart.bi::before {
+    font-weight: 600 !important;
 }
 
 .product-1 {
@@ -382,4 +412,19 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .best-selling:hover .best-selling-actions {
     opacity: 1 !important;
     scale: 1.05;
+}
+
+.footer {
+    background: #F5F3F1;
+}
+
+.footer h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.devider {
+    background: #d5d5d5;
+    height: 1px;
 }

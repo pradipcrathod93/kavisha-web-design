@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: true,
         perPage: 1,
         pauseOnHover: false,
-        speed: 750
+        speed: 750,
     });
 
     splide.mount();
@@ -25,32 +25,44 @@ document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('.testimonials-splide', {
         type: 'loop',
         perMove: 1,
-        pagination: false,
         arrows: false,
         autoplay: true,
         perPage: 1,
         pauseOnHover: false,
         speed: 750,
-        pagination: true
+        pagination: false
     });
 
     splide.mount();
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const hoverElement = document.querySelector(".best-selling"); // Select your image element
-//     const imageElement = document.querySelector(".product-1"); // Select your image element
-//     const hoverImg = document.querySelector(".product-1-hoverimg"); // Select your image element
-//     // const originalSrc = imageElement.src; // Store original image source
-//     // const hoverSrc = "new-image.jpg"; // Replace with the new image URL
+document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('.trusted-partners-splide', {
+        type: 'loop',
+        drag: false,
+        focus: 'center',
+        arrows: false,
+        perPage: 5,
+        pagination: false,
+        autoScroll: {
+            pauseOnHover: false,
+            speed: 0.5,
+        },
+        breakpoints: {
+            1200: {
+                perPage: 4,
+            },
+            991: {
+                perPage: 3,
+            },
+            767: {
+                perPage: 2.5,
+            },
+            500: {
+                perPage: 2,
+            }
+        }
+    });
 
-//     hoverElement.addEventListener("mouseover", function () {
-//         imageElement.classList.add("fade-out");
-//         hoverImg.classList.add("fade-in");
-//     });
-    
-//     hoverElement.addEventListener("mouseout", function () {
-//         imageElement.classList.remove("fade-out");
-//         hoverImg.classList.remove("fade-in");
-//     });
-// });
+    splide.mount(window.splide.Extensions);
+});
