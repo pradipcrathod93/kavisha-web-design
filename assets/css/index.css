@@ -215,6 +215,10 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     width: 100%;
 }
 
+.header-content-area .menu.active:after {
+    width: 100%;
+}
+
 .banner {
     height: 100vh;
 }
@@ -288,6 +292,11 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     border-radius: 0;
 }
 
+.form-select {
+    border: none;
+    box-shadow: none !important;
+}
+
 .text-gray {
     color: #686868;
 }
@@ -353,17 +362,19 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     overflow: hidden;
 }
 
-.testimonials-innter{
+.testimonials-innter {
     z-index: 10;
     position: relative;
 }
-.testimonials-innter .bi-quote{
+
+.testimonials-innter .bi-quote {
     font-size: 100px;
     rotate: 180deg;
     height: 100px;
     color: #ddcebf;
 }
-.testimonials-innter .bi-quote::before{
+
+.testimonials-innter .bi-quote::before {
     vertical-align: 6px;
 }
 
@@ -427,4 +438,29 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .devider {
     background: #d5d5d5;
     height: 1px;
+}
+
+.trusted-partners-wrapper {
+    background: #F5F3F1;
+}
+
+.title-bar {
+    height: 50vh;
+}
+
+.title-bar h1 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.splide__pagination__page.is-active {
+    background: #b3927c !important;
+}
+
+.user-profile-sm {
+    border-radius: 50%;
+    min-height: 54px;
+    min-width: 54px;
+    height: 54px;
+    width: 54px;
 }
