@@ -7,6 +7,7 @@
     <title>Kavisha Ayucare - Shop</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css">
     <link rel="stylesheet" href="./assets/css/shop.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -39,7 +40,6 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <a href="#" class="menu me-4">Login</a>
-                            <i class="bi bi-search fs-5 me-4"></i>
                             <i class="bi bi-heart fs-5 me-4"></i>
                             <i class="bi bi-handbag fs-5"></i>
                         </div>
@@ -68,30 +68,134 @@
         <!-- start: product list -->
         <div class="container text-center px-3 pb-4">
 
-            <div class="d-flex justify-content-between align-items-center py-4">
-                <button class="btn btn-white border-0"> <i class="bi bi-sliders2-vertical"></i> Filters</button>
-                <select class="form-select w-auto" aria-label="Default select example">
-                    <option selected>Default sorting</option>
-                    <option value="popularity">Sort by popularity</option>
-                    <option value="rating">Sort by average rating</option>
-                    <option value="latest">Sort by latest</option>
-                    <option value="highToLow">Sort by price: high to low</option>
-                    <option value="lowToHigh">Sort by price: low to high</option>
-                </select>
+            <div class="row py-4 align-items-center justify-content-between">
+                <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-5 col-xl-4">
+                    <button class="btn btn-white border-0 px-3" data-bs-toggle="offcanvas"
+                        data-bs-target="#filterBar"><i class="bi bi-sliders2-vertical"></i> Filters</button>
+                    <select class="form-select w-auto ms-2" aria-label="Default select example">
+                        <option selected>Default sorting</option>
+                        <option value="popularity">Sort by popularity</option>
+                        <option value="rating">Sort by average rating</option>
+                        <option value="latest">Sort by latest</option>
+                        <option value="highToLow">Sort by price: high to low</option>
+                        <option value="lowToHigh">Sort by price: low to high</option>
+                    </select>
+                </div>
+                <div class="mt-4 mt-md-0 col-12 col-md-6 col-lg-5 col-xl-4">
+                    <input type="text" name="" placeholder="Search products" class="form-control w-100" id="">
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="filterBar" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header px-4">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filters</h5>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas"
+                        aria-label="Close">Done</button>
+                </div>
+                <div class="offcanvas-body px-4 pt-4">
+
+                    <div class="border-bottom pb-2">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6 class="m-0 filters-title">
+                                Filter by category
+                            </h6>
+                            <div class="devider px-2 bg-secondary"></div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start px-2">
+                            <span class="mb-2">Hair</span>
+                            <span class="mb-2">Body</span>
+                            <span class="mb-2">Face</span>
+                        </div>
+                    </div>
+                    <div class="border-bottom pb-2">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6 class="m-0 filters-title">
+                                Filter by Price
+                            </h6>
+                            <div class="devider px-2 bg-secondary"></div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start px-2">
+                            <div id="slider" class="w-100 mb-4 mt-2"></div>
+                            <div class="d-flex align-items-center mb-2">
+                                <h6 class="text-black-50 m-0 me-1">Min Price:</h6>
+                                <span id="max-val" class="me-3"></span>
+                                <h6 class="text-black-50 m-0 me-1">Max Price:</h6>
+                                <span id="min-val"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+
+                            </button>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse px-1"
+                                data-bs-parent="#accordionFlushExample">
+                                
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="m-0 accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Filter by color
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the
+                                    <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
+                                    imagine this being
+                                    filled with some actual content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-gray" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the
+                                    <code>.accordion-flush</code> class. This is the third item's accordion body.
+                                    Nothing more exciting
+                                    happening here in terms of content, but just filling up the space to make it look,
+                                    at least at first
+                                    glance, a bit more representative of how this would look in a real-world
+                                    application.
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
             </div>
 
             <div class="row">
                 <div class="col-6 col-md-4 col-lg-4 col-xl-3 mb-4 pb-3 product-wrapper mx-auto mx-md-0">
-                    <a href="product.html" class="product d-flex">
-                        <div class="product-info">
-                            <span class="badge mb-2"> New </span>
-                            <span class="badge text-danger"> - 9 % </span>
+                    <div class="product">
+                        <a href="product.html" class="d-flex">
+                            <div class="product-info">
+                                <span class="badge mb-2"> New </span>
+                                <span class="badge text-danger"> - 9 % </span>
+                            </div>
+                            <img src="./assets/images/img-3.jpg" height="100%" width="100%"
+                                class="object-fit-cover product-1" alt="">
+                            <img src="./assets/images/img-1.jpg" height="100%" width="100%"
+                                class="object-fit-cover product-1-hoverimg" alt="">
+                        </a>
+                        <div class="add-to-cart">
+                            <h6 class="m-0">Add to cart</h6>
                         </div>
-                        <img src="./assets/images/img-3.jpg" height="100%" width="100%"
-                            class="object-fit-cover product-1" alt="">
-                        <img src="./assets/images/img-1.jpg" height="100%" width="100%"
-                            class="object-fit-cover product-1-hoverimg" alt="">
-                    </a>
+                    </div>
                     <div class="text-start mt-3">
                         <div class="d-flex align-items-center justify-content-between mb-1">
                             <h6 class="m-0">Face kit</h6>
@@ -364,9 +468,12 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
+    <script src="./assets/js/shop.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
+
 </body>
 
 </html>

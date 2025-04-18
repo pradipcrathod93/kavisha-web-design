@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/rater-js@1.0.1/lib/style.min.css" rel="stylesheet">
 </head>
 
 <style>
@@ -41,8 +42,43 @@
         border-radius: 0;
     }
 
+    .swiper-wrapper {
+        max-height: 500px;
+    }
+
     .thumb-swiper .swiper-wrapper {
         display: block;
+        height: 50vh;
+        overflow: auto;
+        width: max-content;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 14px !important;
+        color: black;
+    }
+
+    .swiper-button-next {
+        right: 16px;
+    }
+
+    .swiper-button-prev {
+        left: 16px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: black !important;
+    }
+
+    .max-h-scroll {
+        max-height: 500px;
+        padding-right: 8px;
+        overflow: auto;
+    }
+
+    .rater-star.is-active {
+        color: #ffc107 !important;
     }
 </style>
 
@@ -71,7 +107,6 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <a href="#" class="menu me-4">Login</a>
-                            <i class="bi bi-search fs-5 me-4"></i>
                             <i class="bi bi-heart fs-5 me-4"></i>
                             <i class="bi bi-handbag fs-5"></i>
                         </div>
@@ -85,9 +120,12 @@
         <div class="container px-3 mt-5 pt-5">
             <!-- start: Product Details -->
             <div class="row py-5">
-                <div class="col-12 col-sm-10 col-md-9 col-lg-6 d-flex mx-auto mx-lg-0">
-                    <div class="swiper thumb-swiper pe-4">
+                <div class="col-12 col-sm-10 col-md-9 col-lg-6 d-flex mx-auto mx-lg-0 position-relative">
+                    <div class="swiper thumb-swiper pe-4 d-none d-md-block">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/images/img-1.jpg" /></div>
+                            <div class="swiper-slide"><img src="./assets/images/banner1.jpg" /></div>
+                            <div class="swiper-slide"><img src="./assets/images/img-2.jpg" /></div>
                             <div class="swiper-slide"><img src="./assets/images/img-1.jpg" /></div>
                             <div class="swiper-slide"><img src="./assets/images/banner1.jpg" /></div>
                             <div class="swiper-slide"><img src="./assets/images/img-2.jpg" /></div>
@@ -98,8 +136,14 @@
                             <div class="swiper-slide"><img src="./assets/images/img-1.jpg" /></div>
                             <div class="swiper-slide"><img src="./assets/images/banner1.jpg" /></div>
                             <div class="swiper-slide"><img src="./assets/images/img-2.jpg" /></div>
+                            <div class="swiper-slide"><img src="./assets/images/img-1.jpg" /></div>
+                            <div class="swiper-slide"><img src="./assets/images/banner1.jpg" /></div>
+                            <div class="swiper-slide"><img src="./assets/images/img-2.jpg" /></div>
                         </div>
                     </div>
+                    <div class="swiper-pagination d-block d-md-none mb-3"></div>
+                    <div class="swiper-button-next d-flex d-md-none"></div>
+                    <div class="swiper-button-prev d-flex d-md-none"></div>
                 </div>
                 <div class="col-12 col-sm-10 col-md-9 col-lg-6 py-5 ps-lg-5 mx-auto mx-lg-0">
                     <h1 class="fw-normal mb-4">Hair Oil</h1>
@@ -146,7 +190,7 @@
                     <h4 class="mb-0 me-3 pe-2">Description</h4>
                     <span class="devider px-3"></span>
                 </div>
-                <div class="col-12 col-sm-10 col-md-9 col-lg-8 mx-auto mt-4">
+                <div class="col-12 col-sm-10 col-md-9 col-lg-8 mx-auto mt-4 max-h-scroll">
                     <p class="mb-4 text-gray">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, possimus
                         fuga. Porro suscipit
                         laboriosam excepturi quam perferendis itaque numquam non.</p>
@@ -166,7 +210,7 @@
                     <h4 class="mb-0 me-3 pe-2">2 reviews for "Hair oil"</h4>
                     <span class="devider px-3"></span>
                 </div>
-                <div class="col-12 col-sm-10 col-md-9 col-lg-8 mx-auto mt-4">
+                <div class="col-12 col-sm-10 col-md-9 col-lg-8 mx-auto mt-4 max-h-scroll">
                     <div class="d-flex align-items-start">
                         <div class="user-profile-sm overflow-hidden">
                             <img src="./assets/images/testimonials.jpg" height="100%" width="100%"
@@ -213,12 +257,40 @@
                                 reiciendis</p>
                         </div>
                     </div>
-                    <div class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4 mt-5 mx-auto">
-                        <button class="btn btn-outline-dark border-2 px-5 w-100">Add a review</button>
-                    </div>
+                </div>
+                <div class="col-9 col-sm-7 col-md-5 col-lg-4 col-xl-3 mt-5 mx-auto">
+                    <button class="btn btn-outline-dark border-2 px-5 w-100" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Add a review</button>
                 </div>
             </div>
             <!-- end: Product Reviews -->
+
+            <!-- start: Review modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="review"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="review">Add review</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label class="form-label">Name</label>
+                                <input type="text" name="name" class="form-control mb-4" placeholder="Name" id="">
+                                <label class="form-label">Your rating</label>
+                                <div id="rating-box" class="d-flex mb-4"></div>
+                                <label class="form-label">Your review</label>
+                                <textarea name="review" class="form-control" rows="4" placeholder="Your review"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark mx-auto">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: Review modal -->
 
             <!-- start: Related Products -->
             <div class="py-5">
@@ -402,6 +474,7 @@
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rater-js@1.0.1/index.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
