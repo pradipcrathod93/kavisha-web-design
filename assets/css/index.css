@@ -185,7 +185,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     margin-right: 0;
 }
 
-.header-content-area .menu {
+.menu {
     font-size: 16px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -199,7 +199,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     position: relative;
 }
 
-.header-content-area .menu:after {
+.menu:after {
     content: '';
     height: 2px;
     width: 0;
@@ -211,11 +211,11 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     transition: width .25s;
 }
 
-.header-content-area .menu:hover:after {
+.menu:hover:after {
     width: 100%;
 }
 
-.header-content-area .menu.active:after {
+.menu.active:after {
     width: 100%;
 }
 
@@ -463,4 +463,10 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     min-width: 54px;
     height: 54px;
     width: 54px;
+}
+
+.btn-gray{
+    background: #f0f0f0;
+    text-align: start;
+    padding: 8px 12px;
 }
