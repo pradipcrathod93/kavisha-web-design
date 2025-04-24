@@ -465,8 +465,26 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     width: 54px;
 }
 
-.btn-gray{
+.btn-gray {
     background: #f0f0f0;
     text-align: start;
     padding: 8px 12px;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: #000;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0 !important;
+}
+
+.form-check-input:checked {
+    background-color: black;
+    border-color: #000;
+}
+
+.bg-light-gray{
+    background: #f6f6f6;
 }

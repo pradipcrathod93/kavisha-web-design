@@ -23,7 +23,7 @@
                         <div class="tj-menu-area d-lg-block d-none" id="main-menu">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="shop.html" class="menu ">Shop</a></li>
+                                    <li><a href="shop.html" class="menu">Shop</a></li>
                                     <li><a href="#" class="menu">Products</a></li>
                                 </ul>
                             </nav>
@@ -72,7 +72,7 @@
         </div>
         <div class="offcanvas-body p-4">
             <ul class="list-unstyled border-bottom">
-                <li class="mb-4"><a href="shop.html" class="menu ">Shop</a></li>
+                <li class="mb-4"><a href="shop.html" class="menu">Shop</a></li>
                 <li class="mb-4"><a href="#" class="menu">Products</a></li>
             </ul>
             <div>
@@ -91,73 +91,62 @@
     <div class="pt-5">
         <!-- start: product list -->
         <div class="container px-3 pb-4 pt-5">
-            <h1 class="mt-5 fw-normal text-center">Cart</h1>
+            <h1 class="mt-5 fw-normal text-center">Checkout</h1>
             <div class="row py-5">
-                <div class="w-100 pb-3">
-                    <a href="shop.html" class="menu">
-                        <i class="bi bi-chevron-left small me-2"></i>Continue Shopping
-                    </a>
-                </div>
-                <div class="col-12 col-lg-8 mx-auto pe-lg-5">
-                    <div class="devider"></div>
-                    <div class="d-flex align-items-start py-4 border-bottom">
-                        <div>
-                            <img src="./assets/images/testimonials.jpg" class="object-fit-cover" height="100"
-                                width="100" alt="">
+                <div class="col-12 col-lg-7 mx-auto pe-lg-5">
+                    <div class="pb-3 d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <h4 class="mb-0 me-3 pe-2">Billing Details</h4>
+                            <span class="devider px-3"></span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-start w-100 ps-5 ms-xl-4">
-                            <div>
-                                <h6 class="fw-normal text-capitalize">Lorem, ipsum dolor</h6>
-                                <h6 class="fw-normal text-secondary">123</h6>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-light rounded-circle py-1 px-2">
-                                    <i class="bi bi-dash-lg"></i>
-                                </button>
-                                <span class="px-3 fs-6">1</span>
-                                <button class="btn btn-light rounded-circle py-1 px-2">
-                                    <i class="bi bi-plus-lg"></i>
-                                </button>
-                            </div>
-                            <div class="text-end">
-                                <h5 class="fw-normal mb-3">123.00</h5>
-                                <button class="btn btn-light rounded-circle py-1 px-2">
-                                    <i class="bi bi-x-lg"></i>
-                                </button>
-                            </div>
-                        </div>
+                        <a href="cart.html" class="menu">
+                            <i class="bi bi-chevron-left small me-2"></i>Back to cart
+                        </a>
                     </div>
-                    <div class="d-flex align-items-start py-4 border-bottom">
-                        <div>
-                            <img src="./assets/images/testimonials.jpg" class="object-fit-cover" height="100"
-                                width="100" alt="">
+                    <form action="" class="row">
+                        <div class="col-12 col-md-6 mb-4">
+                            <label for="">First Name</label>
+                            <input type="text" class="form-control rounded-0 py-2" placeholder="First name" name=""
+                                id="">
                         </div>
-                        <div class="d-flex justify-content-between align-items-start w-100 ps-5 ms-4">
-                            <div>
-                                <h6 class="fw-normal text-capitalize">Lorem, ipsum dolor</h6>
-                                <h6 class="fw-normal text-secondary">123</h6>
+                        <div class="col-12 col-md-6 mb-4">
+                            <label for="">Last Name</label>
+                            <input type="text" class="form-control rounded-0 py-2" placeholder="Last name" name=""
+                                id="">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="">Phone Number</label>
+                            <input type="number" class="form-control rounded-0 py-2" placeholder="Phone number" name=""
+                                id="">
+                        </div>
+                        <div class="col-12">
+                            <label for="" class="mb-2">Select Address</label>
+                            <div class="form-check mb-2 d-flex border p-3 rounded-2">
+                                <input class="form-check-input ms-0 me-2" type="radio" name="address" id="address1" checked>
+                                <label class="form-check-label w-auto" for="address1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, eligendi!
+                                </label>
                             </div>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-light rounded-circle py-1 px-2">
-                                    <i class="bi bi-dash-lg"></i>
-                                </button>
-                                <span class="px-3 fs-6">1</span>
-                                <button class="btn btn-light rounded-circle py-1 px-2">
-                                    <i class="bi bi-plus-lg"></i>
-                                </button>
-                            </div>
-                            <div class="text-end">
-                                <h5 class="fw-normal mb-3">123.00</h5>
-                                <button class="btn btn-light rounded-circle py-1 px-2">
-                                    <i class="bi bi-x-lg"></i>
-                                </button>
+                            <div class="form-check mb-2 d-flex border p-3 rounded-2">
+                                <input class="form-check-input ms-0 me-2" type="radio" name="address" id="address2">
+                                <label class="form-check-label w-auto" for="address2">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente suscipit officiis
+                                    explicabo commodi consequatur minus incidunt?
+                                </label>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="col-12 col-lg-4 mx-auto mt-5 mt-lg-0">
-                    <div class="border p-5 p-lg-4 p-xl-5">
-                        <h5 class="mb-0 pb-3 fw-normal border-bottom">Cart totals</h5>
+                <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-0">
+                    <div class="border p-4 p-sm-5 p-lg-4 p-xl-5">
+                        <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                            <div class="d-flex">
+                                <img src="./assets/images/testimonials.jpg" class="object-fit-cover" height="60"
+                                    width="60" alt="">
+                                <h6 class="mb-0 fw-normal ms-3">Lorem ipsum dolor sit <span class="badge bg-secondary rounded-pill h-auto">× 1</span></h6>
+                            </div>
+                            <h6 class="mb-0 text-gray fw-normal">123.00</h6>
+                        </div>
                         <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
                             <h6 class="mb-0 text-gray fw-normal">Subtotal</h6>
                             <h6 class="mb-0 text-gray fw-normal">123.00</h6>
@@ -171,9 +160,34 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center py-3">
                             <h5 class="mb-0">Total</h5>
-                            <h6 class="mb-0 text-gray fw-normal">10.00</h6>
+                            <h6 class="mb-0 text-gray fw-normal">133.00</h6>
                         </div>
-                        <a href="checkout.html" class="btn btn-dark w-100 mt-4">Procced to checkout</a>
+                        <div class="border mb-3">
+                            <div class="form-check p-3">
+                                <input class="form-check-input ms-0 me-2" type="radio" name="payment" id="option1" checked>
+                                <label class="form-check-label" for="option1">
+                                   Case on delivery
+                                </label>
+                            </div>
+                            <div class="devider"></div>
+                            <div class="form-check p-3">
+                                <input class="form-check-input ms-0 me-2" type="radio" name="payment" id="option2">
+                                <label class="form-check-label" for="option2">
+                                    PayPal
+                                </label>
+                            </div>
+                        </div>
+                        <p class="small text-gray">
+                            Your personal data will be used to process your order, support your experience throughout this website, and for other
+                            purposes described in our privacy policy.
+                        </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                I have read and agree to the website terms and conditions
+                            </label>
+                        </div>
+                        <a href="order-confirmation.html" class="btn btn-dark w-100 mt-4">Place order</a>
                     </div>
                 </div>
             </div>
