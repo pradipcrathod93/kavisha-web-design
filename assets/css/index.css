@@ -485,6 +485,52 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     border-color: #000;
 }
 
-.bg-light-gray{
+.bg-light-gray {
     background: #f6f6f6;
+}
+
+.offer-img {
+    background-image: url('../../assets/images/newsletter-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.coupon-code {
+    border: 2px dashed rgb(162, 162, 162);
+    position: relative;
+    padding: 9px;
+}
+
+.close-btn{
+    background: #00000080;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+.coupon-code::before {
+    content: '';
+    background: url('../../assets/images/scissor.svg');
+    rotate: -90deg;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 12px;
+    bottom: -30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.offer-txt {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%, -50%);
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.offer-txt h1{
+    font-size: 50px;
 }

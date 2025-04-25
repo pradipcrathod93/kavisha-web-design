@@ -89,3 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     splide.mount(window.splide.Extensions);
 });
+
+setTimeout(() => {
+    const offerPopup = new bootstrap.Modal(document.getElementById('Offer'));
+    offerPopup.show();
+}, 0);
