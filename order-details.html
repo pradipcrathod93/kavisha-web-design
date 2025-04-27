@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavisha Ayucare - Cart</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- start: Header Area -->
+    <header class="tj-header-area header-sticky">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="header-content-area">
+                        <div class="tj-menu-area d-lg-block d-none" id="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li><a href="shop.html" class="menu">Shop</a></li>
+                                    <li><a href="#" class="menu">Products</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <button class="btn btn-white border-0 p-0 d-block d-lg-none" data-bs-toggle="offcanvas"
+                            data-bs-target="#header">
+                            <i class="bi bi-list fs-5"></i>
+                        </button>
+                        <div class="logo-area">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="./assets/images/Kavisha-Logo-Horizontal.svg" height="40" width="100%"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="menu me-4 d-none d-lg-block">Login</a>
+                            <a href="wishlist.html" class="me-4 d-none d-lg-block text-black">
+                                <i class="bi bi-heart fs-5"></i>
+                            </a>
+                            <a href="cart.html" class="text-black">
+                                <i class="bi bi-handbag fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- start: Mobile Header -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="header" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header px-4">
+            <h5 class="offcanvas-title" id="offcanvasLabel">
+                <div class="logo-area">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/images/Kavisha-Logo-Horizontal.svg" height="40" width="100%" alt="">
+                        </a>
+                    </div>
+                </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-4">
+            <ul class="list-unstyled border-bottom">
+                <li class="mb-4"><a href="shop.html" class="menu">Shop</a></li>
+                <li class="mb-4"><a href="#" class="menu">Products</a></li>
+            </ul>
+            <div>
+                <h6 class="text-black-50 text-uppercase small mb-3">My Account</h6>
+                <a href="#" class="btn btn-gray w-100 mb-2"><i class="bi bi-box me-3"></i>Orders</a>
+                <a href="cart.html" class="btn btn-gray w-100 mb-2"><i class="bi bi-cart me-3"></i>Cart</a>
+                <a href="wishlist.html" class="btn btn-gray w-100 mb-2"><i class="bi bi-heart me-3"></i>Wishlist</a>
+                <a href="#" class="btn btn-gray w-100 mb-2"><i class="bi bi-person me-3"></i>Account details</a>
+                <a href="#" class="btn btn-gray w-100 mb-2"><i class="bi bi-geo-alt me-3"></i>Address</a>
+                <a href="#" class="btn btn-gray w-100 mb-2"><i class="bi bi-box-arrow-right me-3"></i>Log out</a>
+            </div>
+        </div>
+    </div>
+    <!-- end: Mobile Header -->
+
+    <div class="py-5">
+        <!-- start: order details -->
+        <div class="container px-3 pb-4 pt-5">
+            <div class="row">
+                <h1 class="fw-normal text-center my-5">Order details</h1>
+                <!-- start: product list -->
+                <div class="col-12 col-lg-8 mx-auto pe-lg-5 mb-4">
+                    <div class="col-12 pb-3">
+                        <a href="my-orders.html" class="menu">
+                            <i class="bi bi-chevron-left small me-2"></i>Back to orders
+                        </a>
+                    </div>
+                    <div class="border p-4 mb-4">
+                        <h6 class="small fw-normal text-gray m-0">Shipping to</h6>
+                        <h5 class="mb-4">John deo</h5>
+                        <div class="d-flex">
+                            <img src="./assets/images/testimonials.jpg" class="object-fit-cover" height="100"
+                                width="100" alt="">
+                            <div class="ms-4 ms-lg-5">
+                                <h6 class="fw-normal">Lorem ipsum dolor sit <span
+                                        class="badge bg-secondary rounded-pill h-auto">×
+                                        1</span></h6>
+                                <h6 class="mb-4 text-gray fw-normal">123.00</h6>
+                                <p class="fw-normal small">Return/Exchange window closed on Saturday, 28 January</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 mb-4">
+                        <h6 class="small fw-normal text-gray m-0">Shipping to</h6>
+                        <h5 class="mb-4">John deo</h5>
+                        <div class="d-flex">
+                            <img src="./assets/images/testimonials.jpg" class="object-fit-cover" height="100"
+                                width="100" alt="">
+                            <div class="ms-4 ms-lg-5">
+                                <h6 class="fw-normal">Lorem ipsum dolor sit <span
+                                        class="badge bg-secondary rounded-pill h-auto">×
+                                        1</span></h6>
+                                <h6 class="mb-4 text-gray fw-normal">123.00</h6>
+                                <p class="fw-normal small">Return/Exchange window closed on Saturday, 28 January</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end: product list -->
+                <!-- start: order Details -->
+                <div class="col-12 col-lg-4 mx-auto">
+                    <p class="text-gray">Order placed on 24 april 2025</p>
+                    <div class="p-4 pb-0 bg-light-gray">
+                        <div class="pb-4">
+                            <h6 class="text-black-50">Order Number:</h6>
+                            <h6>123123</h6>
+                        </div>
+                        <div class="pb-4">
+                            <h6 class="text-black-50">Email:</h6>
+                            <h6>git@gmail.com</h6>
+                        </div>
+                        <div class="pb-4">
+                            <h6 class="text-black-50">Payment method:</h6>
+                            <h6>Cash on delivery</h6>
+                        </div>
+                    </div>
+                    <div class="border rounded-1 mt-4">
+                        <div class="d-flex justify-content-between p-3 border-bottom">
+                            <h6 class="mb-0 fw-normal">Lorem ipsum dolor sit
+                                <span class="badge bg-secondary rounded-pill h-auto">× 1</span>
+                            </h6>
+                            <h6 class="mb-0 text-gray fw-normal">123.00</h6>
+                        </div>
+                        <div class="bg-light-gray p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h6 class="mb-0 fw-normal">Subtotal:</h6>
+                                <h6 class="mb-0 fw-normal">123.00</h6>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h6 class="mb-0 fw-normal">Shipping:</h6>
+                                <h6 class="mb-0 fw-normal">10.00</h6>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0 fw-normal">Payment method:</h6>
+                                <h6 class="mb-0 fw-normal">Cash on delivery</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between p-3 border-top bg-light-gray">
+                            <h6 class="mb-0 fw-normal">Total:</h6>
+                            <h6 class="mb-0 text-gray fw-normal">123.00</h6>
+                        </div>
+                    </div>
+                    <div class="border rounded-1 mt-4 p-3">
+                        <h4 class="fw-normal mb-4">Address</h4>
+                        <h6>John deo<span class="badge border text-black ms-2 border-secondary">home</span></h6>
+                        <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non corrupti modi
+                            natus aliquid
+                            quasi reiciendis perspiciatis!</p>
+                        <p>1231231231</p>
+                        <p class="m-0">test@gmail.com</p>
+                    </div>
+                </div>
+                <!-- end: order details -->
+            </div>
+        </div>
+        <!-- end: order details -->
+    </div>
+
+    <!-- start: Footer -->
+    <div class="footer">
+        <div class="container py-5 px-3">
+            <div class="text-center py-5">
+                <img src="./assets/images/Kavisha-Logo-Vertical.svg" height="100" width="100%" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center py-4">
+                <h3 class="mb-0">Face</h3>
+                <div class="devider px-4 mx-4 mx-md-5"></div>
+                <h3 class="mb-0">Body</h3>
+                <div class="devider px-4 mx-4 mx-md-5"></div>
+                <h3 class="mb-0">Hair</h3>
+            </div>
+            <div class="d-flex justify-content-center pt-5">
+                <div class="mx-5 text-center">
+                    <h5 class="text-black text-uppercase">About</h5>
+                    <h6 class="fw-normal">Our story</h6>
+                    <h6 class="fw-normal">Diffrence</h6>
+                    <h6 class="fw-normal">Articles</h6>
+                </div>
+                <div class="mx-5 text-center">
+                    <h5 class="text-black text-uppercase">Shop</h5>
+                    <h6 class="fw-normal">Shop</h6>
+                    <h6 class="fw-normal">Shop</h6>
+                    <h6 class="fw-normal">Shop</h6>
+                </div>
+                <div class="mx-5 text-center">
+                    <h5 class="text-black text-uppercase">Care</h5>
+                    <h6 class="fw-normal">Faq</h6>
+                    <h6 class="fw-normal">Faq</h6>
+                    <h6 class="fw-normal">Faq</h6>
+                </div>
+            </div>
+            <div class="pt-4">
+                <div class="d-flex justify-content-between pb-2">
+                    <h5>+123123123</h5>
+                    <h5>Support@gmail.com</h5>
+                </div>
+                <div class="w-100 border-bottom border-secondary my-4"></div>
+                <div class="d-sm-flex text-center justify-content-between pt-2">
+                    <h6 class="m-0 fw-normal small mb-4 mb-sm-0">Copyright © 2025. All rights reserved.</h6>
+                    <div class="d-flex justify-content-center justify-content-sm-end">
+                        <h6 class="m-0 fw-normal small me-3">Terms & Conditions</h6>
+                        <h6 class="m-0 fw-normal small">Privacy Policy</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Footer -->
+
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+</body>
+
+</html>

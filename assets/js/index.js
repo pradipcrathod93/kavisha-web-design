@@ -93,4 +93,4 @@ document.addEventListener('DOMContentLoaded', function () {
 setTimeout(() => {
     const offerPopup = new bootstrap.Modal(document.getElementById('Offer'));
     offerPopup.show();
-}, 0);
+}, 3000);
