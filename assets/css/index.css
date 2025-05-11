@@ -178,7 +178,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .tj-menu-area li {
     display: inline-block;
-    margin-right: 35px;
+    margin-right: 28px;
 }
 
 .tj-menu-area li:last-child {
@@ -554,4 +554,14 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .offer-txt h1 {
     font-size: 50px;
+}
+
+.about-us-banner{
+    height: 100vh;
+    background-image: url("../images/about-us-plain-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    align-items: center;
 }
