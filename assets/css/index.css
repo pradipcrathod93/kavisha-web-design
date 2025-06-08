@@ -353,7 +353,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    color: #777;
+    color: #000;
     margin-bottom: 12px;
 }
 
@@ -556,7 +556,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     font-size: 50px;
 }
 
-.about-us-banner{
+.about-us-banner {
     height: 100vh;
     background-image: url("../images/about-us-plain-bg.png");
     background-repeat: no-repeat;
@@ -564,4 +564,23 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     background-position-y: center;
     display: flex;
     align-items: center;
+}
+
+.form-error {
+    display: block;
+    font-size: 14px;
+    margin-top: -21px;
+    color: rgb(255, 22, 22);
+}
+
+.toast {
+    opacity: 1 !important;
+}
+
+.cart-count {
+    border-radius: 50%;
+    background: #b3927c;
+    font-size: 12px;
+    padding: 0px 5px;
+    color: #ffffff;
 }

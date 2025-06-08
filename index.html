@@ -71,8 +71,9 @@
                             <a href="wishlist.html" class="me-4 d-none d-lg-block text-black">
                                 <i class="bi bi-heart fs-5"></i>
                             </a>
-                            <a href="cart.html" class="text-black">
+                            <a href="cart.html" class="text-black text-decoration-none d-flex align-items-center">
                                 <i class="bi bi-handbag fs-5"></i>
+                                <span class="cart-count">4</span>
                             </a>
                         </div>
                     </div>
@@ -140,7 +141,7 @@
                                     Remember me
                                 </label>
                             </div>
-                            <a href="#" class="menu">Lost your password?</a>
+                            <a href="forgot-passwprd.html" class="menu">Forgot password?</a>
                         </div>
                         <a href="#" class="btn btn-dark w-100">Log in</a>
                         <span class="text-gray w-100 d-block text-center mt-4">Not a member? <a class="menu text-black"
@@ -162,18 +163,33 @@
                     </div>
                     <form action="" class="p-4 pt-2">
                         <h2 class="fw-normal text-center mb-5">Register</h2>
-                        <div class="col-12 mb-4">
-                            <input type="text" class="form-control rounded-0 py-2" placeholder="Full name" name="">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <input type="text" class="form-control rounded-0 py-2" placeholder="Email address" name="">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <input type="password" class="form-control rounded-0 py-2" placeholder="Password" name="">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <input type="password" class="form-control rounded-0 py-2" placeholder="Confirm password"
+                        <div class="col-12">
+                            <input type="text" class="form-control  mb-4 rounded-0 py-2" placeholder="First name"
                                 name="">
+                            <span class="form-error">First name is required</span>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control  mb-4 rounded-0 py-2" placeholder="Last name"
+                                name="">
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control  mb-4 rounded-0 py-2" placeholder="Email address"
+                                name="">
+                        </div>
+                        <div class="col-12">
+                            <input type="number" class="form-control  mb-4 rounded-0 py-2" placeholder="Phone" name="">
+                        </div>
+                        <div class="col-12">
+                            <input type="date" class="form-control  mb-4 rounded-0 py-2" placeholder="Date of birth"
+                                name="">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control  mb-4 rounded-0 py-2" placeholder="Password"
+                                name="">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control  mb-4 rounded-0 py-2"
+                                placeholder="Confirm password" name="">
                         </div>
                         <a href="#" class="btn btn-dark w-100">Register</a>
                         <span class="text-gray w-100 d-block text-center mt-4">Already a member? <a role="button"
@@ -308,10 +324,10 @@
                             class="object-fit-cover product-1" alt="">
                         <img src="./assets/images/img-1.jpg" height="100%" width="100%"
                             class="object-fit-cover product-1-hoverimg" alt="">
-                        <i class="bi bi-heart static-heart"></i>
+                        <i class="bi bi-heart-fill static-heart"></i>
                         <div class="best-selling-actions">
                             <div class="best-selling-action-btn">
-                                <i class="bi bi-heart"></i>
+                                <i class="bi bi-heart-fill"></i>
                             </div>
                             <div class="best-selling-action-btn">
                                 <i class="bi bi-bag"></i>
@@ -576,7 +592,8 @@
                 <div class="d-sm-flex text-center justify-content-between pt-2">
                     <h6 class="m-0 fw-normal small mb-4 mb-sm-0">Copyright © 2025. All rights reserved.</h6>
                     <div class="d-flex justify-content-center justify-content-sm-end">
-                        <a href="terms-conditions.html" class="text-decoration-none text-black m-0 fw-normal small me-3">Terms & Conditions</a>
+                        <a href="terms-conditions.html"
+                            class="text-decoration-none text-black m-0 fw-normal small me-3">Terms & Conditions</a>
                         <a href="#" class="text-decoration-none text-black m-0 fw-normal small">Privacy Policy</a>
                     </div>
                 </div>
